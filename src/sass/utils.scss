@@ -1,0 +1,256 @@
+//Toast样式
+.cy-toast-fade{
+  @keyframes toast {
+    0%{ opacity: 0;}
+    50%{ opacity: 1;}
+    100%{ opacity: 0;}
+  }
+}
+.cy-toast{
+  animation: toast 3s;
+  padding: 15px 25px 15px 25px;
+  background-color: #ccc;
+  text-align: center;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  border-radius: 10px;
+}
+body{
+  position: relative;
+}
+
+//MessageBox样式
+.cy-aler-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 500px;
+  z-index: 999999;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+  animation: aler .2s;
+  opacity: 1;
+  transition: all .5s;
+  .cy-aler-head{
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    color: #B19EEA;
+    padding-top: 15px;
+  }
+  .cy-aler-body{
+    height: 60%;
+    width: 100%;
+    padding: 50px 0 50px 0;
+    text-align: center;
+    color: #A8A3B7;
+  }
+  .cy-aler-foot{
+    text-align: center;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    border: none;
+    border-top: 1px solid #DEDCE4;
+    font-size: 30px;
+    color: #B19EEA;
+    background-color: white;
+    outline: none;
+  }
+}
+.cy-aler-mask{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999998;
+  opacity: .3;
+  background-color: #000;
+  animation: alerMask .2s;
+  transition: all .5s;
+}
+.cy-aler-maskm-fade-out{
+  opacity: 0;
+}
+.cy-aler-fade-out{
+  opacity: 0;
+}
+@keyframes alerMask {
+  0%{ opacity: 0;}
+  100%{ opacity: .3;}
+}
+@keyframes aler {
+  0%{ opacity: 0;}
+  100%{ opacity: 1;}
+}
+
+//confirm
+.cy-confirm-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 500px;
+  z-index: 999999;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+  animation: confirm .2s;
+  opacity: 1;
+  transition: all .5s;
+  .cy-confirm-head{
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    color: #B19EEA;
+    padding-top: 15px;
+  }
+  .cy-confirm-body{
+    height: 60%;
+    width: 100%;
+    padding: 50px 0 50px 0;
+    text-align: center;
+    color: #A8A3B7;
+  }
+  .cy-confirm-foot{
+    width: 100%;
+    height: 20%;
+    border-top: 1px solid #DEDCE4;
+    display: flex;
+    justify-content: space-between;
+    button{
+      width: 50%;
+      height: 100%;
+      border: none;
+      background-color: #fff;
+      font-size: 30px;
+      color: #B19EEA;
+      padding: 10px 0 10px 0;
+      outline: none;
+    }
+    button:nth-child(1){
+      border-right: 1px solid #DEDCE4;
+    }
+  }
+}
+.cy-confirm-mask{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999998;
+  opacity: .3;
+  background-color: #000;
+  animation: confirmMask .2s;
+  transition: all .5s;
+}
+.cy-confirm-maskm-fade-out{
+  opacity: 0;
+}
+.cy-confirm-fade-out{
+  opacity: 0;
+}
+@keyframes confirmMask {
+  0%{ opacity: 0;}
+  100%{ opacity: .3;}
+}
+@keyframes confirm {
+  0%{ opacity: 0;}
+  100%{ opacity: 1;}
+}
+
+//prompt
+.cy-prompt-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 500px;
+  z-index: 999999;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+  animation: prompt .2s;
+  opacity: 1;
+  transition: all .5s;
+  .cy-prompt-head{
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    color: #B19EEA;
+    padding-top: 15px;
+  }
+  .cy-prompt-body{
+    height: 60%;
+    width: 100%;
+    padding: 50px 0 50px 0;
+    text-align: center;
+    color: #A8A3B7;
+    .cy-prompt-input{
+      width: 90%;
+      height: 50px;
+      border: none;
+      border: 1px solid #B19EEA;
+      border-radius: 10px;
+      font-size: 30px;
+      outline: none;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+  }
+  .cy-prompt-foot{
+    width: 100%;
+    height: 20%;
+    border-top: 1px solid #DEDCE4;
+    display: flex;
+    justify-content: space-between;
+    button{
+      width: 50%;
+      height: 100%;
+      border: none;
+      background-color: #fff;
+      font-size: 30px;
+      color: #B19EEA;
+      padding: 10px 0 10px 0;
+      outline: none;
+    }
+    button:nth-child(1){
+      border-right: 1px solid #DEDCE4;
+    }
+  }
+}
+.cy-prompt-mask{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999998;
+  opacity: .3;
+  background-color: #000;
+  animation: promptMask .2s;
+  transition: all .5s;
+}
+.cy-prompt-maskm-fade-out{
+  opacity: 0;
+}
+.cy-prompt-fade-out{
+  opacity: 0;
+}
+@keyframes promptMask {
+  0%{ opacity: 0;}
+  100%{ opacity: .3;}
+}
+@keyframes prompt {
+  0%{ opacity: 0;}
+  100%{ opacity: 1;}
+}
